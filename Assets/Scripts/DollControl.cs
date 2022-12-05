@@ -26,7 +26,7 @@ public class DollControl : MonoBehaviour
     void Update()
     {
         CharacterControl_Slerp(); //움직임을 정리한 함수
-        animator.SetFloat("speed",pcController.velocity.magnitude); //컨트롤러의 속도 값을 애니메이터의 Speed와 연결
+        //animator.SetFloat("speed",pcController.velocity.magnitude); //컨트롤러의 속도 값을 애니메이터의 Speed와 연결
         animator.SetBool("Doll_Walk", Doll_Walk); //걷기, 뛰기 체크값을 애니메이터 IsRun과 연결
 
         //if(Input.GetKeyDown(KeyCode.Space))
@@ -66,7 +66,7 @@ public class DollControl : MonoBehaviour
 
         animator.SetFloat("Move", direction.sqrMagnitude);
 
-        pcController.Move(direction * runSpeed * Time.deltaTime);
+        //pcController.Move(direction * runSpeed * Time.deltaTime);
 
     }
 }
